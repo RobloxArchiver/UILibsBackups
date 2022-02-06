@@ -16,6 +16,10 @@
 
   Note: 
     This version's colors are edited :)
+
+
+	NOTE 2:
+		SpaceWineFinity is a Edit for SpaceWine! I didn't like the colors 1 and 2 that "Press"..keybind.."To open" shit had to go!
 --]]
 
 
