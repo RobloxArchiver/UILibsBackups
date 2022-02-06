@@ -1,4 +1,4 @@
-# CopyofElerium
+# Elerium
 This is a copy of Elerium UI Library V2 that is ImGUI styled
 # Documentation
 Hello, and welcome to this documentation document! This will briefly cover all the necessary steps, you need to create a nice UI. :)
