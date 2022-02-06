@@ -62,9 +62,8 @@ library: {
 
 To create a new window, simply use the following function:
 ```lua
-local window = library:AddWindow(<string> title, <table> options) -- Keep in mind that the options argument is not necessary, if you just leave it nil, it will use the default 
+local window = library:AddWindow(<string> title, <table> options) -- Keep in mind that the options argument is not necessary, if you just leave it nil, it will use the default ui_options table, which is located at the top.
 ```
-ui_options table, which is located at the top.
 
 Notice how I assign the window to a variable ("window"). This is because the function returns a table consisting of more functions, which you can use on this window.
 
