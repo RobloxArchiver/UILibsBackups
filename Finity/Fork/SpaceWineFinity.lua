@@ -6,24 +6,30 @@
 	| |     _| |_| |\  |_| |_   | |     | |   
 	|_|    |_____|_| \_|_____|  |_|     |_|   
 	
-	Source:
-		https://d3to-finity.000webhostapp.com/files/source-0.1.2.txt
 	Version:
-	 0.1.4
+	 0.1.4 -- It's actually 0.1.4, no issue i dont need a color picker
 	Date: 
 		January 18th, 2020
 	Author: 
 		detourious @ v3rmillion.net
 		deto#7612  @ discord.gg
-					
-  Docs:
-    https://detourious.gitbook.io/project-finity/
+
+	Note: 
+		This version's colors are edited :)
+
+	3nd Note: 
+		I didn't completely rename to keep the Magic of Finity! :) 
+		Might move to Elerium but Finity is so swexy
+
+	NOTE 2:
+		SpaceWineFinity is a Edit for SpaceWine! I didn't like the colors 1 and 2 that "Press"..keybind.."To open" shit had to go!
 --]]
 
 
 local finity = {}
 finity.gs = {}
 
+-- changing colors soon :)
 finity.theme = { -- light
 	main_container = Color3.fromRGB(249, 249, 255),
 	separator_color = Color3.fromRGB(223, 219, 228),
@@ -173,7 +179,7 @@ function finity.new(isdark, gprojectName, thinProject)
 		finityData.ToggleKey = NewKey
 		
 		if not projectName then
-			self2.tip.Text = "Press '".. string.sub(tostring(NewKey), 14) .."' to hide this menu"
+			self2.tip.Text = "Space Wine ".._G.versionRW
 		end
 		
 		if finityData.UpConnection then
@@ -286,7 +292,7 @@ function finity.new(isdark, gprojectName, thinProject)
 		ZIndex = 2,
 		Size = UDim2.new(1, -30, 0, 30),
 		Position = UDim2.new(0, 30, 0, 0),
-		Text = "Press '".. string.sub(tostring(self.ToggleKey), 14) .."' to hide this menu",
+		Text = "Space Wine ".._G.versionRW,
 		Font = Enum.Font.GothamSemibold,
 		TextSize = 13,
 		TextXAlignment = Enum.TextXAlignment.Left,
@@ -297,7 +303,7 @@ function finity.new(isdark, gprojectName, thinProject)
 	if projectName then
 		self2.tip.Text = projectName
 	else
-		self2.tip.Text = "Press '".. string.sub(tostring(self.ToggleKey), 14) .."' to hide this menu"
+		self2.tip.Text = "Space Wine ".._G.versionRW
 	end
 	
 	local separator = self:Create("Frame", {

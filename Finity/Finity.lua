@@ -6,20 +6,18 @@
 	| |     _| |_| |\  |_| |_   | |     | |   
 	|_|    |_____|_| \_|_____|  |_|     |_|   
 	
+	Source:
+		https://d3to-finity.000webhostapp.com/files/source-0.1.2.txt
 	Version:
-	 0.1.4 -- It's actually 0.1.4, no issue i dont need a color picker
+	 0.1.4 -- old ass ver sadly
 	Date: 
 		January 18th, 2020
 	Author: 
 		detourious @ v3rmillion.net
 		deto#7612  @ discord.gg
-
-  Note: 
-    This version's colors are edited :)
-
-
-	NOTE 2:
-		SpaceWineFinity is a Edit for SpaceWine! I didn't like the colors 1 and 2 that "Press"..keybind.."To open" shit had to go!
+					
+  Docs:
+    https://detourious.gitbook.io/project-finity/
 --]]
 
 
