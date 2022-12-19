@@ -7,18 +7,18 @@
 --]]
 
 local ui_options = {
-	main_color = Color3.fromRGB(41, 74, 122),
-	min_size = Vector2.new(400, 300),
-	toggle_key = Enum.KeyCode.RightShift,
-	can_resize = true,
+    main_color = Color3.fromRGB(41, 74, 122),
+    min_size = Vector2.new(400, 300),
+    toggle_key = Enum.KeyCode.RightShift,
+    can_resize = true,
 }
 
 do
-	pcall(function()
-			if getgenv().library then
-				return
-			end
-	end)
+    pcall(function()
+        if getgenv().library then
+            return
+	end
+    end)
 end
 
 local imgui = Instance.new("ScreenGui")
@@ -828,17 +828,17 @@ local Prefabs = script.Parent:WaitForChild("Prefabs")
 local Windows = script.Parent:FindFirstChild("Windows")
 
 local checks = {
-	["binding"] = false,
+    ["binding"] = false,
 }
 
 UIS.InputBegan:Connect(function(input, gameProcessed)
-	if input.KeyCode == ((typeof(ui_options.toggle_key) == "EnumItem") and ui_options.toggle_key or Enum.KeyCode.RightShift) then
-		if script.Parent then
-			if not checks.binding then
-				script.Parent.Enabled = not script.Parent.Enabled
-			end
-		end
-	end
+    if input.KeyCode == ((typeof(ui_options.toggle_key) == "EnumItem") and ui_options.toggle_key or Enum.KeyCode.RightShift) then
+        if script.Parent then
+            if not checks.binding then
+		script.Parent.Enabled = not script.Parent.Enabled
+	    end
+        end
+    end
 end)
 
 local function Resize(part, new, _delay)
