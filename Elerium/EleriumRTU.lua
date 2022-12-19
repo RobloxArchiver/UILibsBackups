@@ -14,8 +14,11 @@ local ui_options = {
 }
 
 do
-	local imgui = game:GetService("CoreGui"):FindFirstChild("imgui")
-	if imgui then imgui:Destroy() end
+	pcall(function()
+			if getgenv().library then
+				return
+			end
+	end)
 end
 
 local imgui = Instance.new("ScreenGui")
