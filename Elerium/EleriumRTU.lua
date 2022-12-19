@@ -842,10 +842,10 @@ UIS.InputBegan:Connect(function(input, gameProcessed)
 end)
 
 local function Resize(part, new, _delay)
-	_delay = _delay or 0.5
-	local tweenInfo = TweenInfo.new(_delay, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
-	local tween = TweenService:Create(part, tweenInfo, new)
-	tween:Play()
+    _delay = _delay or 0.5
+    local tweenInfo = TweenInfo.new(_delay, Enum.EasingStyle.Quad, Enum.EasingDirection.Out)
+    local tween = TweenService:Create(part, tweenInfo, new)
+    tween:Play()
 end
 
 local function rgbtohsv(r, g, b) -- idk who made this function, but thanks
