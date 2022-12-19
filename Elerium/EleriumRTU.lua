@@ -2024,6 +2024,8 @@ function library:AddWindow(title, options)
 	return window_data, Window
 end
 
+return library
+
 --[[
 do -- Example UI
 	local Window = library:AddWindow("Preview", {
