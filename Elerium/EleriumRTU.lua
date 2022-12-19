@@ -885,7 +885,7 @@ local function hasprop(object, prop)
 		return object[tostring(prop)]
 	end)
 	if a then
-		return b
+    	return b
 	end
 end
 
