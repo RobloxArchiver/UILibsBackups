@@ -15,7 +15,7 @@ local ui_options = {
 
 do
     pcall(function()
-        if getgenv().Elerium then
+        if getgenv().elerium then
             return
 	    end
     end)
@@ -928,7 +928,7 @@ local function ripple(button, x, y)
 end
 
 local windows = 0
-getgenv().Elerium = {}
+getgenv().elerium = {}
 
 local function format_windows()
 	local ull = Prefabs:FindFirstChild("UIListLayout"):Clone()
@@ -948,11 +948,11 @@ local function format_windows()
 	end
 end
 
-function Elerium:FormatWindows()
+function elerium:FormatWindows()
 	format_windows()
 end
 
-function Elerium:AddWindow(title, options)
+function elerium:AddWindow(title, options)
 	windows = windows + 1
 	local dropdown_open = false
 	title = tostring(title or "New Window")
