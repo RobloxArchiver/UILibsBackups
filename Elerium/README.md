@@ -1,7 +1,8 @@
 # Elerium
 This is a copy of Elerium UI Library V2 that is ImGUI styled
+
 # Documentation
-Hello, and welcome to this documentation document! This will briefly cover all the necessary steps, you need to create a nice UI. :)
+Hello, and welcome to this documentation document! This will briefly cover all the necessary steps, you need to create a nice UI. :)  
 The main variable you will be using is called ("library").
 
 ```
@@ -61,6 +62,7 @@ library: {
 ```
 
 To create a new window, simply use the following function:
+
 ```lua
 local window = library:AddWindow(<string> title, <table> options) -- Keep in mind that the options argument is not necessary, if you just leave it nil, it will use the default ui_options table, which is located at the top.
 ```
@@ -68,11 +70,14 @@ local window = library:AddWindow(<string> title, <table> options) -- Keep in min
 Notice how I assign the window to a variable ("window"). This is because the function returns a table consisting of more functions, which you can use on this window.
 
 To add a tab to our window, we can use the following function:
+
 ```lua
 local tab = window:AddTab()
 ```
-This function will also return a table with functions.
+
+This function will also return a table with functions.  
 To make this tab *show* as first thing, we will add this:
+
 ```lua
 tab:Show()
 ```
@@ -82,11 +87,13 @@ Now we can begin adding stuff to this tab!
 # Examples
 
 ## AddLabel:
+
 ```lua
 tab:AddLabel("Hello World!")
 ```
 
 ## AddButton:
+
 ```lua
 tab:AddButton("Give ...", function()
 	print("Gave ... !")
@@ -94,6 +101,7 @@ end)
 ```
 
 ## AddTextBox:
+
 ```lua
 tab:AddTextBox("Teleport to Player", function(text)
 	teleport_to(game:GetService("Players"):FindFirstChild("text") or game:GetService("Players").LocalPlayer)
@@ -101,14 +109,17 @@ end)
 ```
 
 ## AddSwitch:
+
 ```lua
 local switch = tab:AddSwitch("God Mode", function(bool)
 	toggle_god_mode(bool)
 end)
+
 switch:Set(true)
 ```
 
 ## AddSlider:
+
 ```lua
 local slider = tab:AddSlider("WalkSpeed", function(p)
 	setwalkspeed(p)
@@ -116,6 +127,7 @@ end, {
 	["min"] = 16,
 	["max"] = 100,
 })
+
 slider:Set(16)
 ```
 
@@ -129,6 +141,7 @@ end, {
 ```
 
 ## AddDropdown:
+
 ```lua
 local dropdown = tab:AddDropdown("Teleport to Location", function(text)
 	if text == "Mars" then
@@ -136,21 +149,26 @@ local dropdown = tab:AddDropdown("Teleport to Location", function(text)
 	elseif ...
 	end
 end)
+
 local mars = dropdown:Add("Mars")
 local earth = dropdown:Add("Earth")
 local not_a_planet = dropdown:Add("Iridocyclitis")
+
 not_a_planet:Remove()
 ```
 
 ## AddColorPicker:
+
 ```lua
 tab:AddLabel("Theme color")
+
 local cp = tab:AddColorPicker(function(color)
 	ui_options.main_color = color
 end)
 ```
 
 ## AddFolder:
+
 ```lua
 local folder = tab:AddFolder()
 folder:AddSwitch()
@@ -162,8 +180,9 @@ folder2:AddLabel("I'm inside *two* folders :smirk:")
 
 # Adding Options
 
-The only two element-functions taking options right now is "AddSlider" and "AddTextBox".
+The only two element-functions taking options right now is "AddSlider" and "AddTextBox".  
 To set options, simply add a table as the last argument, like this:
+
 ```lua
 tab:AddSlider("WalkSpeed", function(x)
 	setwalkspeed(x)
@@ -174,6 +193,7 @@ end, {
 ```
 
 ## Now for AddTextBox example:
+
 ```lua
 tab:AddTextBox("Epic", function(text)
 	print("TextBox : " .. text)
@@ -183,6 +203,7 @@ end, {
 ```
 
 ## AddConsole example:
+
 ```lua
 tab:AddConsole({
 	["y"] = 210,
